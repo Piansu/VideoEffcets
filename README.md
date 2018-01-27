@@ -48,4 +48,4 @@ OpenGL基本光照技术的运用（环境光、漫反射光、镜面光）。
 简单demo，项目中存在不合理的地方。
 
 ##YUVlayer_Metal
-
+功能跟“YUVlayer_OpenGL”一样，不过，此项目使用了Apple 提供的Metal图形渲染框架
