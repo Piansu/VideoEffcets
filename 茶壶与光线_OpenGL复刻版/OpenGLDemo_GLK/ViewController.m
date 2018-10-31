@@ -201,8 +201,8 @@
     GLuint projectionLocation = glGetUniformLocation(self.programId, "projectionMatrix");
     
     static CGFloat x = 0, y = 0;
-    x = self.timeSinceFirstResume * (M_PI / 2);
-    y = self.timeSinceFirstResume * (M_PI / 3);
+    x = -self.timeSinceFirstResume * (M_PI / 2);
+    y = -self.timeSinceFirstResume * (M_PI / 3);
 
     GLKMatrix4 modelMatrix = GLKMatrix4Rotate(GLKMatrix4Identity, x, 1, 0, 0);
     modelMatrix = GLKMatrix4Rotate(modelMatrix, y, 0, 1, 0);

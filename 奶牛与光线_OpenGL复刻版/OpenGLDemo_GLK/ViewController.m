@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "ObjLoader.h"
 
+static const CGFloat kVelocityScale = 0.01;
+static const CGFloat kRotationDamping = 0.05;
+
 @interface ViewController ()
 
 @property (nonatomic, strong) EAGLContext *context;
@@ -19,7 +22,10 @@
 @property (nonatomic, assign) GLuint uvBufferAttr;
 @property (nonatomic, assign) GLuint normalBufferAttr;
 
-@property (nonatomic, strong) OBJModel *teapotObj;
+@property (nonatomic, strong) OBJModel *spotObj;
+
+@property (nonatomic, assign) CGPoint angularVelocity;
+@property (nonatomic, assign) CGPoint angle;
 
 @end
 
@@ -37,6 +43,17 @@
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LESS);
     glClearColor(0.95, 0.95, 0.95, 1);
+    
+    UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self
+                                                                                 action:@selector(gestureDidRecognize:)];
+    [self.view addGestureRecognizer:panGesture];
+}
+
+- (void)gestureDidRecognize:(UIGestureRecognizer *)gestureRecognizer
+{
+    UIPanGestureRecognizer *panGestureRecognizer = (UIPanGestureRecognizer *)gestureRecognizer;
+    CGPoint velocity = [panGestureRecognizer velocityInView:self.view];
+    self.angularVelocity = CGPointMake(velocity.x * kVelocityScale, velocity.y * kVelocityScale);
 }
 
 - (void)setupEAGLContext {
@@ -141,28 +158,28 @@
 - (void)setupTeapotModel
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"spot" ofType:@"obj"];
-    OBJModel *teapotObj = [[OBJModel alloc] initWithResourcePath:path];
+    OBJModel *spotObj = [[OBJModel alloc] initWithResourcePath:path];
     
     GLuint vertexbuffer;
     glGenBuffers(1, &vertexbuffer);
     glBindBuffer(GL_ARRAY_BUFFER, vertexbuffer);
-    glBufferData(GL_ARRAY_BUFFER, teapotObj.vertexData.length, teapotObj.vertexData.bytes, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, spotObj.vertexData.length, spotObj.vertexData.bytes, GL_STATIC_DRAW);
     
     GLuint uvbuffer;
     glGenBuffers(1, &uvbuffer);
     glBindBuffer(GL_ARRAY_BUFFER, uvbuffer);
-    glBufferData(GL_ARRAY_BUFFER, teapotObj.uvCoordinateData.length, teapotObj.uvCoordinateData.bytes, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, spotObj.uvCoordinateData.length, spotObj.uvCoordinateData.bytes, GL_STATIC_DRAW);
     
     GLuint normalbuffer;
     glGenBuffers(1, &normalbuffer);
     glBindBuffer(GL_ARRAY_BUFFER, normalbuffer);
-    glBufferData(GL_ARRAY_BUFFER, teapotObj.normalData.length, teapotObj.normalData.bytes, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, spotObj.normalData.length, spotObj.normalData.bytes, GL_STATIC_DRAW);
     
     self.bufferAttr = vertexbuffer;
     self.uvBufferAttr = uvbuffer;
     self.normalBufferAttr = normalbuffer;
     
-    self.teapotObj = teapotObj;
+    self.spotObj = spotObj;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -173,11 +190,43 @@
 
 - (void)update {
     
+    NSTimeInterval duration = self.timeSinceLastDraw;
+    
+    self.angle = CGPointMake(self.angle.x + self.angularVelocity.x * duration,
+                             self.angle.y + self.angularVelocity.y * duration);
+    
+    // Apply damping by removing some proportion of the angular velocity each frame
+    self.angularVelocity = CGPointMake(self.angularVelocity.x * (1 - kRotationDamping),
+                                       self.angularVelocity.y * (1 - kRotationDamping));
+    
+    CGFloat x = self.angle.y;
+    CGFloat y = self.angle.x;
+    GLKMatrix4 modelMatrix = GLKMatrix4Rotate(GLKMatrix4Identity, x, 1, 0, 0);
+    modelMatrix = GLKMatrix4Rotate(modelMatrix, y, 0, 1, 0);
+    
+    GLKMatrix4 viewMatrix = GLKMatrix4Translate(GLKMatrix4Identity, 0, 0, -1.5);
+    
+    const float aspect = self.view.frame.size.width / self.view.frame.size.height;
+    const float fov = (2 * M_PI) / 5;
+    const float near = 0.1;
+    const float far = 100;
+    GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(fov, aspect, near, far);
+    
+    
+    glUseProgram(self.programId);
+    GLuint modelLocation = glGetUniformLocation(self.programId, "modelMatrix");
+    GLuint viewLocation = glGetUniformLocation(self.programId, "viewMatrix");
+    GLuint projectionLocation = glGetUniformLocation(self.programId, "projectionMatrix");
+    
+    glUniformMatrix4fv(modelLocation, 1, GL_FALSE, (GLfloat *)&modelMatrix);
+    glUniformMatrix4fv(viewLocation, 1, GL_FALSE, (GLfloat *)&viewMatrix);
+    glUniformMatrix4fv(projectionLocation, 1, GL_FALSE, (GLfloat *)&projectionMatrix);
+    
+    
 }
 
 #pragma mark render
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect {
-    
     
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
@@ -203,30 +252,8 @@
     glBindBuffer(GL_ARRAY_BUFFER, self.normalBufferAttr);
     glVertexAttribPointer(normal, 3, GL_FLOAT, GL_FALSE, sizeof(float) * 4, NULL);
     
-    GLuint modelLocation = glGetUniformLocation(self.programId, "modelMatrix");
-    GLuint viewLocation = glGetUniformLocation(self.programId, "viewMatrix");
-    GLuint projectionLocation = glGetUniformLocation(self.programId, "projectionMatrix");
     
-    static CGFloat x = 0, y = 0;
-    x = -self.timeSinceFirstResume * (M_PI / 2);
-    y = -self.timeSinceFirstResume * (M_PI / 3);
-
-    GLKMatrix4 modelMatrix = GLKMatrix4Rotate(GLKMatrix4Identity, x, 1, 0, 0);
-    modelMatrix = GLKMatrix4Rotate(modelMatrix, y, 0, 1, 0);
-    
-    GLKMatrix4 viewMatrix = GLKMatrix4Translate(GLKMatrix4Identity, 0, 0, -1.5);
-    
-    const float aspect = view.frame.size.width / view.frame.size.height;
-    const float fov = (2 * M_PI) / 5;
-    const float near = 0.1;
-    const float far = 100;
-    GLKMatrix4 projectionMatrix = GLKMatrix4MakePerspective(fov, aspect, near, far);
-    
-    glUniformMatrix4fv(modelLocation, 1, GL_FALSE, (GLfloat *)&modelMatrix);
-    glUniformMatrix4fv(viewLocation, 1, GL_FALSE, (GLfloat *)&viewMatrix);
-    glUniformMatrix4fv(projectionLocation, 1, GL_FALSE, (GLfloat *)&projectionMatrix);
-    
-    glDrawArrays(GL_TRIANGLES, 0, self.teapotObj.size);
+    glDrawArrays(GL_TRIANGLES, 0, self.spotObj.size);
 }
 
 - (void)dealloc

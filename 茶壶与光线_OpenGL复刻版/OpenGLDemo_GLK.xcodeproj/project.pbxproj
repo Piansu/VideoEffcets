@@ -13,12 +13,10 @@
 		363D7CE1216CA69D0084C40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CE0216CA69D0084C40B /* Assets.xcassets */; };
 		363D7CE4216CA69D0084C40B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CE2216CA69D0084C40B /* LaunchScreen.storyboard */; };
 		363D7CE7216CA69D0084C40B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 363D7CE6216CA69D0084C40B /* main.m */; };
-		363D7CEE216CA7EE0084C40B /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CED216CA7EE0084C40B /* test.jpg */; };
 		363D7CF1216CAB7D0084C40B /* shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CEF216CAB7D0084C40B /* shader.fsh */; };
 		363D7CF2216CAB7D0084C40B /* shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CF0216CAB7D0084C40B /* shader.vsh */; };
 		363ED8A42181DAA100DFA25A /* teapot.obj in Resources */ = {isa = PBXBuildFile; fileRef = 363ED8A32181DAA100DFA25A /* teapot.obj */; };
 		363ED8A72181DD0700DFA25A /* ObjLoader.mm in Sources */ = {isa = PBXBuildFile; fileRef = 363ED8A52181DD0700DFA25A /* ObjLoader.mm */; };
-		3666AB3621830136000D000B /* cube.obj in Resources */ = {isa = PBXBuildFile; fileRef = 3666AB3521830135000D000B /* cube.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,13 +30,11 @@
 		363D7CE3216CA69D0084C40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		363D7CE5216CA69D0084C40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		363D7CE6216CA69D0084C40B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		363D7CED216CA7EE0084C40B /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		363D7CEF216CAB7D0084C40B /* shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fsh; sourceTree = "<group>"; };
 		363D7CF0216CAB7D0084C40B /* shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vsh; sourceTree = "<group>"; };
 		363ED8A32181DAA100DFA25A /* teapot.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = teapot.obj; sourceTree = "<group>"; };
 		363ED8A52181DD0700DFA25A /* ObjLoader.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ObjLoader.mm; sourceTree = "<group>"; };
 		363ED8A62181DD0700DFA25A /* ObjLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ObjLoader.h; sourceTree = "<group>"; };
-		3666AB3521830135000D000B /* cube.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = cube.obj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +74,6 @@
 				363D7CEF216CAB7D0084C40B /* shader.fsh */,
 				363D7CF0216CAB7D0084C40B /* shader.vsh */,
 				363ED8A32181DAA100DFA25A /* teapot.obj */,
-				3666AB3521830135000D000B /* cube.obj */,
-				363D7CED216CA7EE0084C40B /* test.jpg */,
 				363D7CD7216CA69B0084C40B /* AppDelegate.h */,
 				363D7CD8216CA69B0084C40B /* AppDelegate.m */,
 				363D7CE6216CA69D0084C40B /* main.m */,
@@ -148,14 +142,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3666AB3621830136000D000B /* cube.obj in Resources */,
 				363D7CF1216CAB7D0084C40B /* shader.fsh in Resources */,
 				363D7CE4216CA69D0084C40B /* LaunchScreen.storyboard in Resources */,
 				363D7CE1216CA69D0084C40B /* Assets.xcassets in Resources */,
 				363D7CDF216CA69B0084C40B /* Main.storyboard in Resources */,
 				363ED8A42181DAA100DFA25A /* teapot.obj in Resources */,
 				363D7CF2216CAB7D0084C40B /* shader.vsh in Resources */,
-				363D7CEE216CA7EE0084C40B /* test.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
