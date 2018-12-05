@@ -220,7 +220,7 @@ static NSDate *snap = NULL;
 - (void)setupTexture
 {
     self.textureId0 = [self loadTextureToGPU:@"test.jpg"];
-    self.textureId1 = [self loadTextureToGPU:@"test2.jpg"];
+    self.textureId1 = [self loadTextureToGPU:@"mandrill.png"];
     
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, self.textureId0);

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		36080EC721B0E23800A313A8 /* mandrill.png in Resources */ = {isa = PBXBuildFile; fileRef = 36080EC621B0E23800A313A8 /* mandrill.png */; };
 		36FFDB632154806300738DA0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FFDB622154806300738DA0 /* AppDelegate.m */; };
 		36FFDB662154806300738DA0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FFDB652154806300738DA0 /* ViewController.m */; };
 		36FFDB692154806300738DA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36FFDB672154806300738DA0 /* Main.storyboard */; };
@@ -17,10 +18,10 @@
 		36FFDB7A2154811000738DA0 /* shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 36FFDB782154811000738DA0 /* shader.vsh */; };
 		36FFDB7D2154814A00738DA0 /* GLRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 36FFDB7C2154814A00738DA0 /* GLRenderView.m */; };
 		36FFDB7F2154865F00738DA0 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36FFDB7E2154865F00738DA0 /* test.jpg */; };
-		36FFDB822154E1F900738DA0 /* test2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36FFDB812154E1F900738DA0 /* test2.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36080EC621B0E23800A313A8 /* mandrill.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mandrill.png; sourceTree = "<group>"; };
 		36FFDB5E2154806300738DA0 /* OpenGLDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenGLDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36FFDB612154806300738DA0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36FFDB622154806300738DA0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,7 +37,6 @@
 		36FFDB7B2154814A00738DA0 /* GLRenderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLRenderView.h; sourceTree = "<group>"; };
 		36FFDB7C2154814A00738DA0 /* GLRenderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLRenderView.m; sourceTree = "<group>"; };
 		36FFDB7E2154865F00738DA0 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
-		36FFDB812154E1F900738DA0 /* test2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test2.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,7 +76,7 @@
 				36FFDB7B2154814A00738DA0 /* GLRenderView.h */,
 				36FFDB7C2154814A00738DA0 /* GLRenderView.m */,
 				36FFDB7E2154865F00738DA0 /* test.jpg */,
-				36FFDB812154E1F900738DA0 /* test2.jpg */,
+				36080EC621B0E23800A313A8 /* mandrill.png */,
 				36FFDB772154810F00738DA0 /* shader.fsh */,
 				36FFDB782154811000738DA0 /* shader.vsh */,
 				36FFDB672154806300738DA0 /* Main.storyboard */,
@@ -147,11 +147,11 @@
 			files = (
 				36FFDB7A2154811000738DA0 /* shader.vsh in Resources */,
 				36FFDB7F2154865F00738DA0 /* test.jpg in Resources */,
-				36FFDB822154E1F900738DA0 /* test2.jpg in Resources */,
 				36FFDB792154811000738DA0 /* shader.fsh in Resources */,
 				36FFDB6E2154806600738DA0 /* LaunchScreen.storyboard in Resources */,
 				36FFDB6B2154806600738DA0 /* Assets.xcassets in Resources */,
 				36FFDB692154806300738DA0 /* Main.storyboard in Resources */,
+				36080EC721B0E23800A313A8 /* mandrill.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

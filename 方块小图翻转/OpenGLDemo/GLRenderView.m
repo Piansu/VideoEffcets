@@ -44,6 +44,7 @@ static GLfloat snap = 0;
         UIButton *btn = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 80, 40)];
         [btn setTitle:@"再来一次" forState:UIControlStateNormal];
         [btn addTarget:self action:@selector(resetTime) forControlEvents:UIControlEventTouchUpInside];
+        btn.center = CGPointMake(self.frame.size.width / 2, self.frame.size.height - 40 - 50);
         [self addSubview:btn];
         
     }

@@ -13,7 +13,6 @@
 		363D7CE1216CA69D0084C40B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CE0216CA69D0084C40B /* Assets.xcassets */; };
 		363D7CE4216CA69D0084C40B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CE2216CA69D0084C40B /* LaunchScreen.storyboard */; };
 		363D7CE7216CA69D0084C40B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 363D7CE6216CA69D0084C40B /* main.m */; };
-		363D7CEE216CA7EE0084C40B /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CED216CA7EE0084C40B /* test.jpg */; };
 		363D7CF1216CAB7D0084C40B /* shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CEF216CAB7D0084C40B /* shader.fsh */; };
 		363D7CF2216CAB7D0084C40B /* shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 363D7CF0216CAB7D0084C40B /* shader.vsh */; };
 		36A9D26F2176D2E600078C30 /* timg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 36A9D26E2176D2E500078C30 /* timg.jpg */; };
@@ -30,7 +29,6 @@
 		363D7CE3216CA69D0084C40B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		363D7CE5216CA69D0084C40B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		363D7CE6216CA69D0084C40B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		363D7CED216CA7EE0084C40B /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 		363D7CEF216CAB7D0084C40B /* shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fsh; sourceTree = "<group>"; };
 		363D7CF0216CAB7D0084C40B /* shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.vsh; sourceTree = "<group>"; };
 		36A9D26E2176D2E500078C30 /* timg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = timg.jpg; sourceTree = "<group>"; };
@@ -73,7 +71,6 @@
 				363D7CEF216CAB7D0084C40B /* shader.fsh */,
 				363D7CF0216CAB7D0084C40B /* shader.vsh */,
 				363D7CDD216CA69B0084C40B /* Main.storyboard */,
-				363D7CED216CA7EE0084C40B /* test.jpg */,
 				36A9D26E2176D2E500078C30 /* timg.jpg */,
 				363D7CE0216CA69D0084C40B /* Assets.xcassets */,
 				363D7CE2216CA69D0084C40B /* LaunchScreen.storyboard */,
@@ -145,7 +142,6 @@
 				363D7CE1216CA69D0084C40B /* Assets.xcassets in Resources */,
 				363D7CDF216CA69B0084C40B /* Main.storyboard in Resources */,
 				363D7CF2216CAB7D0084C40B /* shader.vsh in Resources */,
-				363D7CEE216CA7EE0084C40B /* test.jpg in Resources */,
 				36A9D26F2176D2E600078C30 /* timg.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
