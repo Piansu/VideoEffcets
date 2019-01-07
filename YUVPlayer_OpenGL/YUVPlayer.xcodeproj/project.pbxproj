@@ -14,7 +14,7 @@
 		36E0AF3621DB1101004E7787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0AF3521DB1101004E7787 /* main.m */; };
 		36E0AF3F21DB1281004E7787 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0AF3E21DB1281004E7787 /* ViewController.m */; };
 		36E0AF4A21DB14CC004E7787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF4821DB14CC004E7787 /* Main.storyboard */; };
-		36E0AF4C21DB253E004E7787 /* output.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF4B21DB253E004E7787 /* output.yuv */; };
+		36E0AF4C21DB253E004E7787 /* test.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF4B21DB253E004E7787 /* test.yuv */; };
 		75C0387721E5890A00B7067A /* GLRenderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C0387621E5890A00B7067A /* GLRenderView.m */; };
 		75C0387B21E59D1900B7067A /* shader.fsh in Resources */ = {isa = PBXBuildFile; fileRef = 75C0387921E59D1800B7067A /* shader.fsh */; };
 		75C0387C21E59D1900B7067A /* shader.vsh in Resources */ = {isa = PBXBuildFile; fileRef = 75C0387A21E59D1800B7067A /* shader.vsh */; };
@@ -33,7 +33,7 @@
 		36E0AF3D21DB1281004E7787 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		36E0AF3E21DB1281004E7787 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		36E0AF4921DB14CC004E7787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		36E0AF4B21DB253E004E7787 /* output.yuv */ = {isa = PBXFileReference; lastKnownFileType = text; path = output.yuv; sourceTree = "<group>"; };
+		36E0AF4B21DB253E004E7787 /* test.yuv */ = {isa = PBXFileReference; lastKnownFileType = text; path = test.yuv; sourceTree = "<group>"; };
 		75C0387521E5890A00B7067A /* GLRenderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GLRenderView.h; sourceTree = "<group>"; };
 		75C0387621E5890A00B7067A /* GLRenderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GLRenderView.m; sourceTree = "<group>"; };
 		75C0387921E59D1800B7067A /* shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = shader.fsh; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 				75C0387621E5890A00B7067A /* GLRenderView.m */,
 				75C0387921E59D1800B7067A /* shader.fsh */,
 				75C0387A21E59D1800B7067A /* shader.vsh */,
-				36E0AF4B21DB253E004E7787 /* output.yuv */,
+				36E0AF4B21DB253E004E7787 /* test.yuv */,
 				365CE60C22337AB9004C7D0D /* lena_256x256_yuv420p.yuv */,
 				36E0AF2F21DB1101004E7787 /* Assets.xcassets */,
 				36E0AF3121DB1101004E7787 /* MainMenu.xib */,
@@ -152,7 +152,7 @@
 				36E0AF3321DB1101004E7787 /* MainMenu.xib in Resources */,
 				365CE60D22337AB9004C7D0D /* lena_256x256_yuv420p.yuv in Resources */,
 				75C0387C21E59D1900B7067A /* shader.vsh in Resources */,
-				36E0AF4C21DB253E004E7787 /* output.yuv in Resources */,
+				36E0AF4C21DB253E004E7787 /* test.yuv in Resources */,
 				36E0AF4A21DB14CC004E7787 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
