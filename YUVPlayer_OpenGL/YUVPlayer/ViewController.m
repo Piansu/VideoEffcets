@@ -34,7 +34,7 @@
     int stride = width * height * 1.5;
     u_char *buffer = malloc(stride * sizeof(u_char));
 
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"output" ofType:@"yuv"];
+    NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"yuv"];
 //    NSString *path = [[NSBundle mainBundle] pathForResource:@"lena_256x256_yuv420p" ofType:@"yuv"];
     FILE *fd = fopen(path.UTF8String, "r");
 
