@@ -25,9 +25,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-//    int width = 256;
-//    int height = 256;
-    
     int width = 1280;
     int height = 720;
     
@@ -35,7 +32,6 @@
     u_char *buffer = malloc(stride * sizeof(u_char));
 
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"yuv"];
-//    NSString *path = [[NSBundle mainBundle] pathForResource:@"lena_256x256_yuv420p" ofType:@"yuv"];
     FILE *fd = fopen(path.UTF8String, "r");
 
     GLRenderView *glview = [[GLRenderView alloc] initWithFrame:self.view.bounds];
