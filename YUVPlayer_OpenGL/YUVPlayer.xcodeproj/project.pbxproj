@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		365CE60D22337AB9004C7D0D /* lena_256x256_yuv420p.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 365CE60C22337AB9004C7D0D /* lena_256x256_yuv420p.yuv */; };
 		36E0AF2E21DB10FF004E7787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0AF2D21DB10FF004E7787 /* AppDelegate.m */; };
 		36E0AF3021DB1101004E7787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF2F21DB1101004E7787 /* Assets.xcassets */; };
 		36E0AF3321DB1101004E7787 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF3121DB1101004E7787 /* MainMenu.xib */; };
@@ -21,7 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		365CE60C22337AB9004C7D0D /* lena_256x256_yuv420p.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = lena_256x256_yuv420p.yuv; sourceTree = "<group>"; };
 		36E0AF2921DB10FF004E7787 /* YUVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YUVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		36E0AF2C21DB10FF004E7787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		36E0AF2D21DB10FF004E7787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -79,7 +77,6 @@
 				75C0387921E59D1800B7067A /* shader.fsh */,
 				75C0387A21E59D1800B7067A /* shader.vsh */,
 				36E0AF4B21DB253E004E7787 /* test.yuv */,
-				365CE60C22337AB9004C7D0D /* lena_256x256_yuv420p.yuv */,
 				36E0AF2F21DB1101004E7787 /* Assets.xcassets */,
 				36E0AF3121DB1101004E7787 /* MainMenu.xib */,
 				36E0AF4821DB14CC004E7787 /* Main.storyboard */,
@@ -150,7 +147,6 @@
 				36E0AF3021DB1101004E7787 /* Assets.xcassets in Resources */,
 				75C0387B21E59D1900B7067A /* shader.fsh in Resources */,
 				36E0AF3321DB1101004E7787 /* MainMenu.xib in Resources */,
-				365CE60D22337AB9004C7D0D /* lena_256x256_yuv420p.yuv in Resources */,
 				75C0387C21E59D1900B7067A /* shader.vsh in Resources */,
 				36E0AF4C21DB253E004E7787 /* test.yuv in Resources */,
 				36E0AF4A21DB14CC004E7787 /* Main.storyboard in Resources */,
