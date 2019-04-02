@@ -1,0 +1,357 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3636DF2E2233A76A001F701C /* test.yuv in Resources */ = {isa = PBXBuildFile; fileRef = 3636DF2D2233A76A001F701C /* test.yuv */; };
+		36E0AF2E21DB10FF004E7787 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0AF2D21DB10FF004E7787 /* AppDelegate.m */; };
+		36E0AF3021DB1101004E7787 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF2F21DB1101004E7787 /* Assets.xcassets */; };
+		36E0AF3321DB1101004E7787 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF3121DB1101004E7787 /* MainMenu.xib */; };
+		36E0AF3621DB1101004E7787 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0AF3521DB1101004E7787 /* main.m */; };
+		36E0AF3F21DB1281004E7787 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36E0AF3E21DB1281004E7787 /* ViewController.m */; };
+		36E0AF4A21DB14CC004E7787 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36E0AF4821DB14CC004E7787 /* Main.storyboard */; };
+		75C0389121E5CD3600B7067A /* SRCMetalView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75C0388E21E5CD3500B7067A /* SRCMetalView.m */; };
+		75C0389221E5CD3600B7067A /* Shaders.metal in Sources */ = {isa = PBXBuildFile; fileRef = 75C0388F21E5CD3500B7067A /* Shaders.metal */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3636DF2D2233A76A001F701C /* test.yuv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.yuv; sourceTree = "<group>"; };
+		36E0AF2921DB10FF004E7787 /* YUVPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YUVPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		36E0AF2C21DB10FF004E7787 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		36E0AF2D21DB10FF004E7787 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		36E0AF2F21DB1101004E7787 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		36E0AF3221DB1101004E7787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		36E0AF3421DB1101004E7787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36E0AF3521DB1101004E7787 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		36E0AF3721DB1101004E7787 /* YUVPlayer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = YUVPlayer.entitlements; sourceTree = "<group>"; };
+		36E0AF3D21DB1281004E7787 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		36E0AF3E21DB1281004E7787 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		36E0AF4221DB128E004E7787 /* SRCRenderTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCRenderTypes.h; sourceTree = "<group>"; };
+		36E0AF4921DB14CC004E7787 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		75C0388E21E5CD3500B7067A /* SRCMetalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRCMetalView.m; sourceTree = "<group>"; };
+		75C0388F21E5CD3500B7067A /* Shaders.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = Shaders.metal; sourceTree = "<group>"; };
+		75C0389021E5CD3500B7067A /* SRCMetalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRCMetalView.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		36E0AF2621DB10FF004E7787 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		36E0AF2021DB10FF004E7787 = {
+			isa = PBXGroup;
+			children = (
+				36E0AF2B21DB10FF004E7787 /* YUVPlayer */,
+				36E0AF2A21DB10FF004E7787 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		36E0AF2A21DB10FF004E7787 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				36E0AF2921DB10FF004E7787 /* YUVPlayer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36E0AF2B21DB10FF004E7787 /* YUVPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				36E0AF2C21DB10FF004E7787 /* AppDelegate.h */,
+				36E0AF2D21DB10FF004E7787 /* AppDelegate.m */,
+				36E0AF3D21DB1281004E7787 /* ViewController.h */,
+				36E0AF3E21DB1281004E7787 /* ViewController.m */,
+				75C0388F21E5CD3500B7067A /* Shaders.metal */,
+				75C0389021E5CD3500B7067A /* SRCMetalView.h */,
+				75C0388E21E5CD3500B7067A /* SRCMetalView.m */,
+				36E0AF4221DB128E004E7787 /* SRCRenderTypes.h */,
+				3636DF2D2233A76A001F701C /* test.yuv */,
+				36E0AF2F21DB1101004E7787 /* Assets.xcassets */,
+				36E0AF3121DB1101004E7787 /* MainMenu.xib */,
+				36E0AF4821DB14CC004E7787 /* Main.storyboard */,
+				36E0AF3421DB1101004E7787 /* Info.plist */,
+				36E0AF3521DB1101004E7787 /* main.m */,
+				36E0AF3721DB1101004E7787 /* YUVPlayer.entitlements */,
+			);
+			path = YUVPlayer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		36E0AF2821DB10FF004E7787 /* YUVPlayer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 36E0AF3A21DB1101004E7787 /* Build configuration list for PBXNativeTarget "YUVPlayer" */;
+			buildPhases = (
+				36E0AF2521DB10FF004E7787 /* Sources */,
+				36E0AF2621DB10FF004E7787 /* Frameworks */,
+				36E0AF2721DB10FF004E7787 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YUVPlayer;
+			productName = YUVPlayer;
+			productReference = 36E0AF2921DB10FF004E7787 /* YUVPlayer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		36E0AF2121DB10FF004E7787 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "Su Ruochang";
+				TargetAttributes = {
+					36E0AF2821DB10FF004E7787 = {
+						CreatedOnToolsVersion = 9.3;
+					};
+				};
+			};
+			buildConfigurationList = 36E0AF2421DB10FF004E7787 /* Build configuration list for PBXProject "YUVPlayer_Metal" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 36E0AF2021DB10FF004E7787;
+			productRefGroup = 36E0AF2A21DB10FF004E7787 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				36E0AF2821DB10FF004E7787 /* YUVPlayer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		36E0AF2721DB10FF004E7787 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				36E0AF3021DB1101004E7787 /* Assets.xcassets in Resources */,
+				36E0AF3321DB1101004E7787 /* MainMenu.xib in Resources */,
+				3636DF2E2233A76A001F701C /* test.yuv in Resources */,
+				36E0AF4A21DB14CC004E7787 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		36E0AF2521DB10FF004E7787 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75C0389221E5CD3600B7067A /* Shaders.metal in Sources */,
+				36E0AF3F21DB1281004E7787 /* ViewController.m in Sources */,
+				75C0389121E5CD3600B7067A /* SRCMetalView.m in Sources */,
+				36E0AF3621DB1101004E7787 /* main.m in Sources */,
+				36E0AF2E21DB10FF004E7787 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		36E0AF3121DB1101004E7787 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E0AF3221DB1101004E7787 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		36E0AF4821DB14CC004E7787 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				36E0AF4921DB14CC004E7787 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		36E0AF3821DB1101004E7787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		36E0AF3921DB1101004E7787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		36E0AF3B21DB1101004E7787 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YUVPlayer/YUVPlayer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YUVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COM.SRC.YUVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		36E0AF3C21DB1101004E7787 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = YUVPlayer/YUVPlayer.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = YUVPlayer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = COM.SRC.YUVPlayer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		36E0AF2421DB10FF004E7787 /* Build configuration list for PBXProject "YUVPlayer_Metal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E0AF3821DB1101004E7787 /* Debug */,
+				36E0AF3921DB1101004E7787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		36E0AF3A21DB1101004E7787 /* Build configuration list for PBXNativeTarget "YUVPlayer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				36E0AF3B21DB1101004E7787 /* Debug */,
+				36E0AF3C21DB1101004E7787 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 36E0AF2121DB10FF004E7787 /* Project object */;
+}
